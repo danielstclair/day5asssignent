@@ -28,28 +28,11 @@ body {
 	padding-left: 0
 }
 
-.layout:active {
-	position: relative;
-	left: 150px;
-}
-
-.layout:active .menu-link {
-	left: 150px;
-}
-
-.menu-link:active {
-	left: 150px;
-}
-
-.layout:active #menu {
-	left: 0px;
-}
-
 
 
 /********Nav Link********/
 
-.menu-link {
+.menu-link, #menu-checkbox {
 	width: 52px;
 	height: 45px;
 	position: fixed;
@@ -57,6 +40,25 @@ body {
 	left: 0;
 	background-color: rgba(0,0,0,0.7);
 	z-index: 10;
+}
+
+#menu-checkbox {
+	opacity: 0;
+	cursor: pointer;
+	margin: 0;
+	z-index: 11;
+}
+
+#menu-checkbox:hover + .menu-link {
+	background-color: black;
+}
+
+#menu-checkbox:checked ~ #menu {
+	left: 0;
+}
+
+#menu-checkbox:checked, #menu-checkbox:checked + .menu-link {
+	left: 150px;
 }
 
 .ion-navicon:before {
@@ -236,6 +238,10 @@ li a {
         left: 0px;
     }
 
+    .menu-link, #menu-checkbox {
+    	display: none;
+    }
+
     .heading {
 		margin-left: 150px;
 	}
@@ -255,36 +261,3 @@ li a {
 
 	/*This closing bracket is with the media querie!!!!!!!!!!*/
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
