@@ -61,6 +61,10 @@ body {
 	left: 150px;
 }
 
+#menu-checkbox:checked ~ .heading, #menu-checkbox:checked ~ .text {
+	padding-left: 12em;
+}
+
 .ion-navicon:before {
 	font-size: 2em;
 	color: white;
